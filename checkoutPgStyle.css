@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3940a0;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #202347;
+}
+
+.home{
+    background-color: #202347;
+}
+
+#back{
+    color: azure;
+    padding: 10px 15px;
+    background-color: #774bf0;
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;  
+}
+
+.pageName{
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    font-size: xx-large;
+}
+a:link{
+    text-decoration: none;
+    color: azure;
+}
+a:visited{
+    text-decoration: none;
+    color: azure;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+h2{
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    font-size: 2rem;
+}
+.bookingInfo,.paymentMethod{
+    border: 1px solid black;
+    background-color: #373b69;
+
+}
+.bookingInfo{
+    background-color: #774bf0;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem;
+    letter-spacing: 0.5px;  
+}
+.paymentMethod{
+    background-color: #774bf0;
+    border-radius: 10px;
+    width: 50%;
+}
+.bookingInfo h3{
+    text-align: center;
+    font-size: 20px;
+}
+.bookingInfo .movie-name, .price, .screenCount, .gst, .total{
+    padding: 2px;
+} 
+.bookingInfo .movie-name{
+    color: rgb(136, 5, 5);
+    font-size: 20px;
+    text-shadow:1px 1px 1px rgb(32, 32, 32);
+}
+.cost{
+    display: flex;
+    justify-content:space-between;
+    margin-right: 5px;
+}
+.screenCount{
+    display:flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+.screenCount input{
+    color: black;
+    justify-content:space-between;
+}
+.gst{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+.paymentMethod{
+    padding: 5px;
+    line-height: 0.5;
+    display:table;
+}
+form h3{
+    text-align: center;
+}
+form input{
+    color: black;
+}
+form button{
+    color: black;
+    width: 95%;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+}
+.paymentSelection{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.paymentSelection div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn{
+    padding: 10px 20px;
+    background: rgb(0, 255, 47);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 30px;
+    margin: 10px;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem;
+    letter-spacing: 0.5px;   
+}
+.btn:active{
+    transform: scale(0.95);
+}
+
+.popup{
+    width: 400px;
+    background: azure;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    /* transform: translate(-50%, -50%) scale(1); */
+    text-align: center;
+    padding: 0 30px 60px;
+    visibility: hidden;
+    transition: transform all 0.4s, ease-in-out;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 50px;
+    color: #333;
+}
+.popup p{
+    color: #333;
+}
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3940a0;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #202347;
+}
+
+/* For search bar */
+.search{
+    background-color: transparent;
+    border: 2px solid #3940a0;;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: azure;
+    font-family: inherit;
+}
+/* For removing outline of the search bar focus */
+.search:focus{
+    outline: 0;
+    background-color: #3940a0;;
+}
+.search::placeholder{
+    color: #7378c5;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie{
+    width: 250px;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    background-color: #202347;
+    position: relative;
+    overflow: hidden;
+}
+.movie img{
+    width: 100%;
+}
+.movie-info{
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+/* To remove movie title top margin */
+.movie-info h3{
+    margin-top: 0;
+}
+.movie-info span{
+    background-color: rgb(43, 41, 41);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.movie-info span.green{
+    color: green;
+}
+.movie-info span.orange{
+    color: orange;
+}
+.movie-info span.red{
+    color: red;
+}
+
+.overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: azure;
+    padding: 1rem;
+    max-height: 100%;
+    /* For hovering intitial position*/
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
+#tags{
+    width: 80%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+.tag{
+    color: azure;
+    padding: 10px 15px;
+    background-color: #774bf0;
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tag.highlight{
+    background-color: black;
+}
+
+.no-results{
+    color: azure;
+}

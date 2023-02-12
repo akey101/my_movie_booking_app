@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkoutPgStyle.css">
+    <title>Checkout Page</title>
+</head>
+<body>
+    <div class="home">
+        <a href="index.html"><button id="back">Back</button></a>  
+        <div class="pageName"><a href="index.html">My Movies Booking App</a></div>
+    </div>
+    <h2>Checkout : Almost here!!!</h2>
+    <main class="main">
+        
+        <div class="bookingInfo">
+            <h3>Booking Information</h3>
+            <div class="movie-name"></div>
+            <div class="cost">
+                <div>Movie Streaming:</div>
+                    <div>&#8377;84</div>
+            </div>
+            
+            <div class="screenCount">
+                <label for="number-of-screens">Number of Screens for Streaming at a time:</label>
+                <input type="number" id="number-of-screens" onkeyup="gettingCost()">
+            </div>
+            
+            <div class="gst">
+                <div>GST (18%):</div>
+                <div>
+                    &#8377;<span id="gst">0</span>
+                </div>
+            </div>
+            
+            <div class="total">
+                <div>Total:</div>
+                <div>
+                    &#8377;<span id="total">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="paymentMethod">
+            <form action="">
+                <h3>Payment Info</h3>
+                <label for="fname">First Name: </label>
+                <input type="text" id="fname" placeholder="First Name"><br></br>
+                <label for="lname">Last Name: </label>
+                <input type="text" id="lname" placeholder="Last Name"><br></br>
+                <label for="email">Email: </label>
+                <input type="email" id="email" placeholder="id@example.com"><br></br>
+                <br></br>
+                Payment by:<br></br>
+                <input type="radio" id="credit-card" value="credit-card" name="paymethod" checked onclick="paymentSelected()">
+                <label for="credit-card">Credit Card</label>
+                <input type="radio" id="debit-card" value="debit-card" name="paymethod" onclick="paymentSelected()">
+                <label for="debit-card">Debit Card</label>
+                <input type="radio" id="upi" value="upi" name="paymethod" onclick="paymentSelected()">
+                <label for="upi">UPI</label>
+                <input type="radio" id="netBanking" value="netBanking" name="paymethod" onclick="paymentSelected()">
+                <label for="netBanking">Net Banking</label><br></br>
+                <div class="paymentSelection">
+                    <!-- Default representation is credit card -->
+                    <label for="nameOnCard">Name on Credit Card: </label><br>
+                    <input type="text" id="nameOnCard"><br></br>
+                    <label for="creditCardNumber">Credit Card Number: </label><br>
+                    <input type="number" id="creditCardNumber"><br></br>
+                    <div>
+                        <label for="expiry">Expiry: </label>
+                        <input type="date" id="expiry"><br></br>
+                        <label for="cvv">CVV: </label>
+                        <input type="password" id="cvv"><br></br>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class ="container">
+            <button type="submit" class="btn" onclick="openPopup()">Proceed To Pay</button>
+            <div class="popup" id="popup">
+                <h2>Thank You!</h2>
+                <p>Your Movie Booking has been successfully confirmed. Streaming link will be avilable shorlty on your provided email. Thanks!</p>
+                <a href="index.html"><button id="back" type="button">OK</button></a> 
+            </div>
+        </div>
+    </main>
+    <script src="checkoutPgScript.js" defer></script>
+</body>
+</html>
